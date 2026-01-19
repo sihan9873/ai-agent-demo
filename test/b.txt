@@ -1,0 +1,15 @@
+def file_reader():
+    try:
+        filename = input("Enter the filename: ")
+        with open(filename, 'r') as file:
+            contents = file.read()
+            print("File Content:")
+            print(contents)
+    except FileNotFoundError:
+        print("File not found.")
+    except Exception as e:
+        print("An error occurred:", e)
+
+# Entry point of the script
+if __name__ == "__main__":
+    file_reader()

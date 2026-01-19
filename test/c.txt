@@ -1,0 +1,32 @@
+def list_manager():
+    item_list = []
+    while True:
+        print("\nOptions:")
+        print("1. Add item")
+        print("2. Remove item")
+        print("3. View list")
+        print("4. Quit")
+        choice = input("Enter your choice: ")
+
+        if choice == '1':
+            item = input("Enter item to add: ")
+            item_list.append(item)
+        elif choice == '2':
+            item = input("Enter item to remove: ")
+            if item in item_list:
+                item_list.remove(item)
+            else:
+                print("Item not found in list.")
+        elif choice == '3':
+            if item_list:
+                print("List:", item_list)
+            else:
+                print("List is empty.")
+        elif choice == '4':
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+# Entry point of the script
+if __name__ == '__main__':
+    list_manager()
